@@ -1,0 +1,51 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>slim3</Name>
+    <ProjectGuid>{a120dfbe-2880-4df9-8096-735f881e7ef0}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <SaveServerSettingsInUserFile>false</SaveServerSettingsInUserFile>
+    <Runtime>PHP</Runtime>
+    <RuntimeVersion>5.6</RuntimeVersion>
+    <EnvName>PHPDev</EnvName>
+    <PHPDevHostName>localhost</PHPDevHostName>
+    <PHPDevAutoPort>true</PHPDevAutoPort>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="logs\app.log" />
+    <Compile Include="logs\README.md" />
+    <Compile Include="public\.htaccess" />
+    <Compile Include="public\index.php" />
+    <Compile Include="src\dependencies.php" />
+    <Compile Include="src\middleware.php" />
+    <Compile Include="src\routes.php" />
+    <Compile Include="src\settings.php" />
+    <Compile Include="templates\index.phtml" />
+    <Compile Include="templates\Script1.php" />
+    <Compile Include="tests\Functional\BaseTestCase.php" />
+    <Compile Include="tests\Functional\HomepageTest.php" />
+    <Compile Include=".gitignore" />
+    <Compile Include="composer.json" />
+    <Compile Include="composer.lock" />
+    <Compile Include="CONTRIBUTING.md" />
+    <Compile Include="phpunit.xml" />
+    <Compile Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="logs" />
+    <Folder Include="public" />
+    <Folder Include="src" />
+    <Folder Include="templates" />
+    <Folder Include="tests\Functional" />
+    <Folder Include="tests" />
+  </ItemGroup>
+</Project>
